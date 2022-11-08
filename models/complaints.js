@@ -7,7 +7,8 @@ const ComplaintSchema = new Schema({
     description: String,
     municipality: String,
     district:String,
-    imageurl : String
+    imageurl : String,
+    mail:String
 });
 
 module.exports = mongoose.model('Complaint', ComplaintSchema);
