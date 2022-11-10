@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors({
     origin: "*", // <-- location of the react app were connecting to
-    credentials: true
+    methods:["GET","POST"],
 }))
 
 // app.use(bodyParser.json())
