@@ -1,5 +1,5 @@
 const express= require("express")
-const cors=require("cors")
+// const cors=require("cors")
 const mongoose=require('mongoose');
 const passport = require("passport");
 const passportLocal = require("passport-local").Strategy; 
@@ -26,12 +26,10 @@ db.once("open",()=>{
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-app.use(cors())
+// app.use(cors(
 
-cors(corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-})
+// ))
+
 
 // app.use(bodyParser.json())
 // app.use(bodyParser.urlencoded({extended:true}));
