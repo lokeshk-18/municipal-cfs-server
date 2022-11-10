@@ -26,11 +26,7 @@ db.once("open",()=>{
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-app.use(cors({
-    origin: "*", // <-- location of the react app were connecting to
-    methods:["GET","POST"],
-    credentials:true
-}))
+app.use(cors())
 
 // app.use(bodyParser.json())
 // app.use(bodyParser.urlencoded({extended:true}));
