@@ -29,6 +29,7 @@ app.use(express.json())
 app.use(cors({
     origin: "*", // <-- location of the react app were connecting to
     credentials: true,
+    methods:["get","post"]
 }))
 
 // app.use(bodyParser.json())
