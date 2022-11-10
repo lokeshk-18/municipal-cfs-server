@@ -1,9 +1,9 @@
 const Complaint = require('../models/complaints');
 
 module.exports.createcomplaint = async (req, res)=>{
-    var {name,description,address,municipality,district,imageurl,mail}=req.body;
+    var {name,description,address,municipality,district,imageurl}=req.body;
     console.log(name,description,address,municipality,district,imageurl);
-    const complaint = new Complaint({name,description,address,municipality,district,imageurl,mail});
+    const complaint = new Complaint({name,description,address,municipality,district,imageurl});
     await complaint.save();
     console.log(complaint);
 }
