@@ -27,9 +27,8 @@ db.once("open",()=>{
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors({
-    origin: "*", // <-- location of the react app were connecting to
-    credentials: true,
-    methods:["get","post"]
+    origin: "https://municipalcfs.netlify.app/", // <-- location of the react app were connecting to
+    credentials: true
 }))
 
 // app.use(bodyParser.json())
